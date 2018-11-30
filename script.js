@@ -1,27 +1,27 @@
 // document.addEventListener('DOMContentLoaded', function(){
 // TicTacToe game
-
+// need three or four functions;
+// switch each players turn
+// adding a sign
 // prompt at the end to say you won
+// reset the game
 
 
+// Changing each turn
 
-// let playerTurn = 1
-// const innerSquare = document.getElementsByTagName("td")
+let playerTurn = 1
+function whichTurn() {
+  if (playerTurn == 1) {
+    document.addEventListener("click", function() {
+      playerTurn = 2;
+    })
+  } else if (playerTurn == 2) {
+    document.addEventListener("click", function(){
+      playerTurn = 1;
+    })
+  }
+}
 
-// function addSign() {
-//   if (playerTurn == 1) {
-//     innerSquare.addEventListener("click", function() {
-//       innerSquare.innerHTML = "X";
-//     });
-//     playerTurn = 2;
-//   }
-//   else if (playerTurn == 2){
-//   innerSquare.addEventListener("click", function() {
-//     innerSquare.innerHTML = "O";
-//   });
-//     playerTurn = 1;
-//   }
-// }
 
 
 document.addEventListener("click", myFunction);
@@ -67,8 +67,7 @@ function addSign8() {
 }
 
 // Win cons:
-
-// const winCon = [
+// 
 //   [0, 1, 2],
 //   [3, 4, 5],
 //   [6, 7, 8],
@@ -77,7 +76,7 @@ function addSign8() {
 //   [2, 5, 8],
 //   [0, 4, 8],
 //   [2, 4, 6]
-// ] ;
+// 
 
 function checkWinner() {
   if (document.getElementById("innerSquare0") == "X" && document.getElementById("innerSquare1") == "X" && document.getElementById("innerSquare2") == "X") {alert("X has won!")}
@@ -90,8 +89,22 @@ function checkWinner() {
   else if (document.getElementById("innerSquare2").innerHTML == "X" && document.getElementById("innerSquare4").innerHTML == "X" && document.getElementById("innerSquare6").innerHTML == "X") {alert("X has won!")}
 }
 
-// function grid() {
-//   console.log(document.getElementsByClassName("innerSquare"))
+
+// original broken code
+
+// const innerSquare = document.getElementsByTagName("td")
+
+// function addSign() {
+//   if (playerTurn == 1) {
+//     innerSquare.addEventListener("click", function() {
+//       innerSquare.innerHTML = "X";
+//     });
+//     playerTurn = 2;
+//   }
+//   else if (playerTurn == 2){
+//   innerSquare.addEventListener("click", function() {
+//     innerSquare.innerHTML = "O";
+//   });
+//     playerTurn = 1;
+//   }
 // }
-  
-// })
